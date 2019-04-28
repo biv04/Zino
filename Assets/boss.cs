@@ -27,7 +27,7 @@ public class boss : EnemyController
         health = 100;
         speed = 0.05f;
         hitTime = 1f;
-
+        damage = 30f;
     }
 
  
@@ -35,9 +35,9 @@ public class boss : EnemyController
     {
         healthBar.fillAmount = Mathf.RoundToInt(health) / 100f;
 
-        if (hurtBar.fillAmount >= healthBar.fillAmount)
+        if (hurtBar.fillAmount > healthBar.fillAmount)
         {
-            hurtBar.fillAmount -= speed * Time.deltaTime;
+            hurtBar.fillAmount -= healthBarSpeed * Time.deltaTime;
         }
         else if (hurtBar.fillAmount <= healthBar.fillAmount)
         {

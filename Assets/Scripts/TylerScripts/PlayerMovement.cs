@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         jumping = false;
         onGround = true;
         secondJump = false;
-        hitTime = 1f;
+        hitTime = 1 / 1000 * 85;
         //gravityCounter = 0;
         //health = 100;
         speed = 0.04f;

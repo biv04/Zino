@@ -16,6 +16,8 @@ public class EnemyController : MonoBehaviour
     public float currHitTime;
     public float hitTime;
 
+    protected float damage = 10f;
+
     //This is not how you use this component, how would you access the player's elements if it's new??
     //PlayerInventory p = new PlayerInventory();
 
@@ -120,7 +122,7 @@ public class EnemyController : MonoBehaviour
             
             
 
-            player.GetComponent<PlayerHealth>().health -= 10;
+            player.GetComponent<PlayerHealth>().health -= (int)(damage);
             player.GetComponent<PlayerMovement>().isHit = true;
             player.GetComponent<PlayerMovement>().currHitTime = Time.time;
 
